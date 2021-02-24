@@ -23,10 +23,40 @@ body {
     align-items: center;
 }
 
-.container {
-    border: 1px solid black;
-}
-
 input, button {
     font-size: 2.2rem;
+    padding: 1rem;
+    border: none;
+    background-color: #f3f1f1;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+.widget {
+    position: relative;
+    background-color: yellow;
+    width: 46px;
+    transition: width .5s ease;
+}
+
+.widget.active {
+    width: 300px;
+}
+
+.widget__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+.widget__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
